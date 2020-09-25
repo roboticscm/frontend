@@ -1,0 +1,90 @@
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: var(--base-background);
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--primary);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  //box-shadow: inset 0 0 1px var(--primary);
+  background: var(--bg-list);
+  &:hover {
+    background: var(--bg-tertiary);
+  }
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  //background: var(--readonly-text-color);
+  background: var(--bg-list);
+  border-radius: 2px;
+  &:hover {
+    background: var(--readonly-text-color);
+  }
+}
+
+
+input[type='text'], input[type='search'], input[type='number'] {
+  background: var(--bg-primary);
+}
+
+input[type="text"]:disabled {
+  color: var(--readonly-text-color)
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+input[type='password'] {
+  font-family: 'suntech-circle';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+  /* add spacing to better separate each image */
+  letter-spacing: 2px;
+}
+
+.password-suntech-circle {
+  font-family: 'suntech-circle';
+}
+
+.password-suntech-asterisk {
+  font-family: 'suntech-asterisk';
+}
+
+.password-suntech-x {
+  font-family: 'suntech-x';
+}
+
+.password-suntech-run {
+  font-family: 'suntech-run';
+}
+
+.password-suntech-heart {
+  font-family: 'suntech-heart';
+}
+

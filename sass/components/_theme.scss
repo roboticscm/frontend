@@ -1,0 +1,173 @@
+:root {
+    --base-background: rgba(255, 250, 246, 1);
+    --base-color: #4c4c4c;
+  
+    --primary: #4c4c4c;
+    --bg-primary: #FFF9F6;
+  
+    --secondary: #f2f2f2;
+    --bg-secondary: #ea1f40;
+  
+    --tertiary: #FFFFFF;
+    --bg-tertiary: #eff4f8;
+  
+    --bg-form: #FFF9F6;
+    --bg-list: #EFEEED;
+  
+    --danger: #ffffff;
+    --bg-danger: #dc3545;
+  
+    --success: #ffffff;
+    --bg-success: #28a745;
+  
+    --info: #ffffff;
+    --bg-info: #17a2b8;
+  
+    --normal: black;
+    --bg-normal: #c8cacb;
+  
+    --table-row-bgcolor: var(--bg-primary);
+    --form-control-bgcolor: #f1f1f1;
+  
+    --error: red;
+  
+    --selection-row-bgcolor: #c4bf6b;
+    --selection-cell-bgcolor: #c4bf6b;
+    --selection-bgcolor: var(--bg-primary);
+    --selection-color: #020b0a;
+    --button-border-color: rgba(0, 0, 0, 0.05);
+  
+    --bg-gutter-color: var(--bg-tertiary);
+    --dot-color: var(--bg-tertiary);
+  
+    --bg-gutter-color-inside-form:var(--bg-tertiary);
+    --dot-color-inside-form: var(--bg-tertiary);
+  
+    --readonly-text-color: #858585;
+    --disabled-text-color: #bfbfbf;
+  
+    --highlight-text-color: var(--bg-secondary);
+  
+    --welcome-color: #572228;
+  
+    --border-color: #cecece;
+    --active-border-color: #ea1f40;
+    --hover-border-color: #ea1f40;
+    --separate-color: #c9c9c9;
+    --my-active-color: #ea1f40;
+    --link-color: #1a6f46;
+    --notify-icon-color: #58242C;
+    --empty-notify-icon-color: var(--readonly-text-color);
+  
+    --header-top-height: 48px;
+    --header-bottom-height: 48px;
+    --avatar-size: 42px;
+    --notify-bgcolor: rgb(255, 253, 177);
+    --modal-header-bgcolor: #eee6e4;
+    --link-color: #1c84c6;
+    --process-color1: rgba(0, 0, 0, 0.3);
+    --process-color2: rgba(255, 0, 0, 0.5);;
+  
+    --status-new: #4c4c4c;
+    --status-wait-for-approve: orange;
+    --status-approved: #2f7411;
+    --status-processing: orange;
+    --status-completed: #2f7411;
+    --recent-color: #4c4c4c;
+  
+    --horizontal-gutter-width: 20px;
+    ::placeholder {
+      color: var(--base-color);
+      //opacity: 0.5;
+    }
+  }
+  
+  
+  .theme-ebony {
+    --base-background: rgb(27, 22, 22);
+    --base-color: #e8e8e8;
+  
+    --primary: #BFBFBF;
+    --bg-primary: #181818;
+  
+    --secondary: #f2f2f2;
+    --bg-secondary: #ed1a3b;
+  
+    --tertiary: #FFFFFF;
+    --bg-tertiary: #2c2c2c;
+  
+    --bg-form: #181818;
+    --bg-list: #0F0F0F;
+  
+    --danger: #ffffff;
+    --bg-danger: #ed1a3b;
+  
+    --success: #ffffff;
+    --bg-success: #28a745;
+  
+    --info: #ffffff;
+    --bg-info: #17a2b8;
+  
+    --normal: black;
+    --bg-normal: #c8cacb;
+  
+    --form-control-bgcolor: #272827;
+  
+    --error: #ed1a3b;
+  
+  
+    --table-row-bgcolor: var(--bg-tertiary);
+    --selection-row-bgcolor: #54422a;
+    --selection-cell-bgcolor: #54422a;
+    --selection-bgcolor: #181818;
+    --selection-color: var(--primary);
+    --button-border-color: rgba(255, 255, 255, 0.05);
+  
+    --bg-gutter-color: var(--bg-tertiary);
+    --dot-color: var(--bg-tertiary);
+  
+    --bg-gutter-color-inside-form: var(--bg-tertiary);
+    --dot-color-inside-form: var(--bg-tertiary);
+  
+    --readonly-text-color: #848484;
+    --disabled-text-color: #2c2b2b;
+  
+    --highlight-text-color: var(--bg-secondary);
+  
+    --welcome-color: #572228;
+  
+    --border-color: #525252;
+    --hover-border-color: #f1df75;
+    --active-border-color: #ed1a3b;
+    --separate-color: #454443;
+    --my-active-color: #ed1a3b;
+    --link-color: #1a6f46;
+    --notify-icon-color: #b5afaf;
+    --empty-notify-icon-color: #2c2b2b;
+  
+    --header-top-height: 48px;
+    --header-bottom-height: 48px;
+    --avatar-size: 42px;
+    --notify-bgcolor: var(--bg-form);
+    --modal-header-bgcolor: black;
+    --link-color: #1c84c6;
+    --process-color1: rgba(255, 255, 255, 0.3);
+    --process-color2: rgba(255, 0, 0, 0.5);
+  
+    --status-new: #BFBFBF;
+    --status-wait-for-approve: orange;
+    --status-approved: #2f7411;
+    --status-processing: orange;
+    --status-completed: #2f7411;
+    --recent-color: #BFBFBF;
+  
+    --horizontal-gutter-width: 20px;
+    ::placeholder {
+      //color: var(--base-color);
+      //opacity: 0.5;
+      color: #919090;
+    }
+  }
+  
+  
+  

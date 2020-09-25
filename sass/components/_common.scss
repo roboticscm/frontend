@@ -1,0 +1,91 @@
+.main-view {
+  height: calc(100% - #{$header-height});
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    height: $header-height;
+    .left {
+        padding: 10px 20px;
+        flex: 0;
+        a {
+            text-decoration: none;
+            &:hover {
+                color: red;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .center {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        .search {
+            width: 80%;
+            padding: 5px;
+        }
+    }
+
+    .right {
+        flex: 0;
+        li {
+            display: inline;
+            padding: 10px 20px;
+            flex: 0.1;
+            a {
+                text-decoration: none;
+                &:hover {
+                    color: red;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+    
+    color: orange;
+}
+
+.view-container-2-col {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 260px $horizontal-gutter-width auto;
+    // padding-left: $default-padding;
+    // padding-right: $default-padding;
+  }
+
+  .view-left {
+    height: 100%;
+    overflow: auto;
+    border-radius: $default-border-radius;
+    padding: $default-padding;
+    //border: $default-border;
+  }
+  
+  .view-content {
+    height: 100%;
+    padding: $default-padding;
+    overflow: auto;
+  }
+
+  .left-grid-vertical-gutter {
+    grid-area: 1 / 2;
+    cursor: col-resize;
+    background: linear-gradient(
+          90deg,
+          var(--bg-gutter-color) ($dot-space - $dot-size),
+          transparent 1%
+        )
+        center,
+      linear-gradient(
+          var(--bg-gutter-color) ($dot-space - $dot-size),
+          transparent 1%
+        )
+        center,
+      var(--dot-color);
+    background-size: $dot-space $dot-space;
+  }
+  

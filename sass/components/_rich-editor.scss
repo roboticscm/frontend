@@ -1,0 +1,37 @@
+.rich-editor {
+    margin-top: $default-padding;
+    &__body {
+      margin-top: $default-padding;
+      border: $default-border;
+      border-radius: $default-border-radius;
+      display: flex;
+      flex-direction: column;
+      //background: var(--bg-primary);
+      background: transparent;
+      &__controller {
+        // display: none;
+        // justify-content: space-evenly;
+        // flex-direction: column;
+        button {
+          padding: $large-padding;
+          outline: none;
+
+        }
+      }
+  
+      .show-controller {
+        display: flex;
+      }
+  
+      &__content {
+        width: 100%;
+        border: none;
+        html body {
+          font-family: $default-font-family;
+          font-size: 2rem;
+          color: var(--primary);
+        }
+      }
+    }
+  
+  }
