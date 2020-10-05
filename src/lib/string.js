@@ -6,11 +6,18 @@ export class StringUtil {
     }
 
     static genUUID() {
-        return uuidv4();
+        return uuidv4().replace(/-/g, '');
     };
 
     static countDiv(source) {
         return (source.match(/<div>/g) || []).length;
     }
 
+    static removeHtmlTag(source) {
+        return source.replace(/<\/?[^>]+(>|$)/g, '');
+    };
+
+    static replaceHtmlTag(source) {
+        return source.replace(/<br>/g, '\r');
+    };
 }

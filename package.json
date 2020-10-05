@@ -13,7 +13,10 @@
     "codemirror": "^5.58.1",
     "compression": "^1.7.1",
     "express": "^4.17.1",
+    "knex": "^0.21.6",
+    "objection": "^2.2.3",
     "pg": "^8.3.3",
+    "rxjs": "^6.6.3",
     "sirv": "^1.0.0",
     "split-grid": "^1.0.9",
     "uuid": "^8.3.0"

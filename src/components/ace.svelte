@@ -1,22 +1,34 @@
 <script>
   import { onMount } from "svelte";
-  import { StringUtil } from "src/lib/string";
 
   export let content;
-  const id = StringUtil.genUUID();
+  export let language = "javascript";
+  export let height = undefined;
 
-  onMount(() => {
+  let editorRef;
+
+  $: if (content) {
     import("src/lib/vendor/ace/build/src-noconflict/ace").then((res) => {
       const ace = res.default;
-      const editor = ace.edit(id);
+      const editor = ace.edit(editorRef);
 
-      import("src/lib/vendor/ace/build/src-noconflict/mode-javascript").then(
+      editor.setValue(content, 1);
+      // const lines = editor.session.doc.getAllLines();
+      // if (!height) {
+      //   height = lines.length < 10 ? "100px" : "200px";
+      // }
+
+      import(`src/lib/vendor/ace/build/src-noconflict/mode-${language}`).then(
         (r) => {
-          const JavaScriptMode = ace.require("ace/mode/javascript").Mode;
-          editor.session.setMode(new JavaScriptMode());
+          const Mode = ace.require(`ace/mode/${language}`).Mode;
+          editor.session.setMode(new Mode());
         }
       );
     });
+  }
+
+  onMount(() => {
+    editorRef.style.height = height;
   });
 </script>
 
@@ -27,4 +39,4 @@
   }
 </style>
 
-<div {id} class="ace-editor">{content}</div>
+<div bind:this={editorRef} class="ace-editor" />

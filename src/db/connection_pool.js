@@ -1,6 +1,6 @@
-const {Pool} = require("pg");
+const { Pool } = require("pg");
 
-export const pool = new Pool ({
+export const pool = new Pool({
     "host": 'localhost',
     "port": 5433,
     "user": "frontend",
