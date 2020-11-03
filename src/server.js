@@ -2,6 +2,8 @@ import sirv from 'sirv';
 import express from 'express';
 import compression from 'compression';
 import * as sapper from '@sapper/server';
+import jwt from 'jsonwebtoken'
+import cookieParser from 'cookie-parser'
 import { post as postLesson } from './routes/index_api';
 import { get as getLessons } from './routes/course/details/lesson_api';
 
@@ -39,8 +41,20 @@ app
 	.use(
 		compression({ threshold: 0 }),
 		sirv('static', { dev }),
-		sapper.middleware()
-	)
+		cookieParser(),
+    (req, res, next) => {
+      const token = req.cookies['my-jwt']
+      const profile = token ? jwt.decode(token) : false
+
+      return sapper.middleware({
+        session: () => {
+          return {
+            authenticated: !!profile,
+            profile
+          }
+        }
+      })(req, res, next)
+    })
 	.listen(PORT, err => {
 		if (err) console.log('error', err);
 	});

@@ -14,10 +14,22 @@
 </script>
 
 <script>
+  import { onMount } from "svelte";
+  import { stores } from "@sapper/app";
+
   import List from "./components/list";
 
   export let courses;
   export let page;
+
+  const { session } = stores();
+
+  onMount(() => {
+    if (!$session.authenticated) {
+      const target = window.location.pathname + window.location.search;
+      window.location.href = `/auth/login?page=${target}`;
+    }
+  });
 </script>
 
 <style>
